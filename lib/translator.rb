@@ -1,4 +1,4 @@
-require_relative "../lib/emoticons.yml"
+require_relative "emoticons.yml"
 
 def load_library
 load 'emoticons.yml'
