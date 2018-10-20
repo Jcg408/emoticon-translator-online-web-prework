@@ -13,8 +13,8 @@ library.each do |k,v|
 end
 
 def get_japanese_emoticon(filepath, emo)
-  load_library(filepath)
-  if k= 
+  library = load_library(filepath)
+  
 end
 
 def get_english_meaning
