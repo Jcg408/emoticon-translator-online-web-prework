@@ -1,13 +1,29 @@
-# require modules here
+require "yaml"
 
-def load_library
-  # code goes here
+def load_library(filepath)
+library = YAML.load_file(filepath)
+hash = {"get_meaning"=>{}, "get_emoticon"=>{}}
+library.each do |k,v|
+  hash["get_meaning"][v[1]] = k
+  hash["get_emoticon"][v[0]] = v[1]
+ end
+ hash
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(filepath, emo)
+  library = load_library(filepath)
+  if library["get_emoticon"][emo]!=nil
+    library["get_emoticon"][emo]
+  else
+   return "Sorry, that emoticon was not found"
+  end
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(filepath, emo)
+  library=load_library(filepath)
+  if library["get_meaning"][emo]!=nil
+    library["get_meaning"][emo]
+  else
+    return "Sorry, that emoticon was not found"
+  end
 end
