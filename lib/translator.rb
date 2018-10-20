@@ -6,8 +6,8 @@ def load_library(filepath)
 library = YAML.load_file(filepath)
 hash = {"get_meaning"=>{}, "get_emoticon"=>{}}
 library.each do |k,v|
-  hash["get_meaning"][value[1]] = k
-  hash["get_emoticon"][value[0]] = v[1]
+  hash["get_meaning"][v[1]] = k
+  hash["get_emoticon"][v[0]] = v[1]
  end
  hash
 end
