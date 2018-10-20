@@ -9,6 +9,7 @@ library.each do |k,v|
   hash["get_meaning"][value[1]]=key
   binding.pry
 end
+end
 
 def get_japanese_emoticon
   # code goes here
