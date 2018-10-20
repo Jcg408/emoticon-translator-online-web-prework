@@ -17,7 +17,6 @@ def get_japanese_emoticon(filepath, emo)
   if library["get_emoticon"][emo]!=nil
     library["get_emoticon"][emo]
   else
-
    return "Sorry, that emoticon was not found"
   end
 end
