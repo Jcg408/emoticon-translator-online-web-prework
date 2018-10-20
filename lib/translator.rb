@@ -4,7 +4,7 @@ require "pry"
 
 def load_library(filepath)
 library = YAML.load_file(filepath)
-hash = {"get_meaning"=>{}, "get_emoticon"=>{}}
+hash = {"get_meaning"=>{""=>""}, "get_emoticon"=>{""=>""}}
 end
 
 def get_japanese_emoticon
