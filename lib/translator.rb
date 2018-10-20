@@ -14,7 +14,7 @@ end
 
 def get_japanese_emoticon(filepath, emo)
   library = load_library(filepath)
-  
+  if library
 end
 
 def get_english_meaning
