@@ -15,6 +15,9 @@ end
 def get_japanese_emoticon(filepath, emo)
   library = load_library(filepath)
   if library["get_emoticon"]==emo
+    emo
+  else
+    return "Sorry, that is not a known emoticon."
 end
 
 def get_english_meaning
